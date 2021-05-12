@@ -1,30 +1,37 @@
 #!/usr/bin/python3
-import math
+"""
+In a text file, there is a single character H.
+Your text editor can execute only two operations in this file:
+1. Copy All 
+2. Paste
+Given a number n, write a method that calculates the fewest number
+of operations needed to result in exactly n H characters in the file.
+Returns an integer.
+If n is impossible to achieve, return 0.
+"""
 
 
 def minOperations(n): 
-    """ minOperations module finds the minimum number
-    of operations needed,
-    returns an integer,
-    returns 0 if operation is impossible.
+    """
+    calculates the fewest number of operations needed
     """
 
     # initial state
-    dp = 0
+    result = 0
 
     # return 0 if <=  1
     if type(n) is not int or n < 2:
-        return dp
+        return result
 
     # iterate for the remaining numbers
-    for i in range(2, int(math.sqrt(n) + 1)):
+    for i in range(2, n + 1):
         while n % i == 0:
-            dp += i
+            result += i
             n = n // i
     
     # n is prime 
     if n > 1:
-        dp += n
+        result += n
         
     # Return the minimum operations to obtain n
-    return dp
+    return result
