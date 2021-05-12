@@ -24,13 +24,14 @@ def minOperations(n):
         return result
 
     # iterate for the remaining numbers
+    for i in range(2, n):
+        while n % i == 0:
+            result += i
+            n = n / i
+
+    # for prime numbers
     if n > 1:
-        for i in range(2, n):
-            while n % i == 0:
-                result += i
-                n = n / i
-            else:
-                i += 1
+        result += n
 
     # Return the minimum operations to obtain n
     return result
