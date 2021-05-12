@@ -27,11 +27,7 @@ def minOperations(n):
     for i in range(2, n + 1):
         while n % i == 0:
             result += i
-            n = n // i
-
-    # n is prime
-    if n > 1:
-        result += n
+            n = n / i
 
     # Return the minimum operations to obtain n
     return result
