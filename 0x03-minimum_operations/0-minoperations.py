@@ -2,7 +2,7 @@
 """
 In a text file, there is a single character H.
 Your text editor can execute only two operations in this file:
-1. Copy All 
+1. Copy All
 2. Paste
 Given a number n, write a method that calculates the fewest number
 of operations needed to result in exactly n H characters in the file.
@@ -11,7 +11,7 @@ If n is impossible to achieve, return 0.
 """
 
 
-def minOperations(n): 
+def minOperations(n):
     """
     calculates the fewest number of operations needed
     """
@@ -28,10 +28,10 @@ def minOperations(n):
         while n % i == 0:
             result += i
             n = n // i
-    
-    # n is prime 
+
+    # n is prime
     if n > 1:
         result += n
-        
+
     # Return the minimum operations to obtain n
     return result
