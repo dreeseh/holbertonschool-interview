@@ -20,14 +20,17 @@ def minOperations(n):
     result = 0
 
     # return 0 if <=  1
-    if type(n) is not int or n < 2:
+    if type(n) is not int or n <= 1:
         return result
 
     # iterate for the remaining numbers
-    for i in range(2, n):
-        while n % i == 0:
-            result += i
-            n = n / i
+    if n > 1:
+        for i in range(3, n + 1):
+            if n % i == 0:
+                result += i
+                n = n / i
+            else:
+                i += 1
 
     # Return the minimum operations to obtain n
     return result
