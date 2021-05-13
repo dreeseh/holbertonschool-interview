@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import math
 """
 In a text file, there is a single character H.
 Your text editor can execute only two operations in this file:
@@ -24,10 +25,10 @@ def minOperations(n):
         return result
 
     # iterate for the remaining numbers
-    for i in range(2, n):
+    for i in range(2, int(math.sqrt(n))):
         while n % i == 0:
             result += i
-            n = n / i
+            n = n // i
 
     # for prime numbers
     if n > 1:
