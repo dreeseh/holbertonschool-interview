@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import math
 """
 In a text file, there is a single character H.
 Your text editor can execute only two operations in this file:
@@ -10,6 +9,7 @@ of operations needed to result in exactly n H characters in the file.
 Returns an integer.
 If n is impossible to achieve, return 0.
 """
+import math
 
 
 def minOperations(n):
