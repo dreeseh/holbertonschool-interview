@@ -4,6 +4,7 @@
  * @head: double pointer to the head of the singly linked list
  * Return: 0 if it is not a palindrome, 1 if it is a palindrome
  */
+
 int is_palindrome(listint_t **head)
 {
     return (checkPalindrome(head, *head));
