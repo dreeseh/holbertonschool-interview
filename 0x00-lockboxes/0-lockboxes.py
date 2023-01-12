@@ -16,5 +16,6 @@ def canUnlockAll(boxes):
         for keys in boxes[node]:
             if not seen[keys]:
                 seen[keys] = True
-                stack.append(keys)
+                if keys < len(boxes):
+                    stack.append(keys)
     return all(seen)
