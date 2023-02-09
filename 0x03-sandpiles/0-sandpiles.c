@@ -60,11 +60,11 @@ void stable_grid(int grid[3][3])
  */
 void add_2_piles(int grid1[3][3], int grid2[3][3])
 {
-	int x, y;
+	int i, j;
 
-	for (x = 0; x < 3; x++)
-		for (y = 0; y < 3; y++)
-			grid1[x][y] += grid2[x][y];
+	for (i = 0; i < 3; i++)
+		for (j = 0; j < 3; j++)
+			grid1[i][j] += grid2[i][j];
 }
 
 /**
@@ -74,15 +74,15 @@ void add_2_piles(int grid1[3][3], int grid2[3][3])
  */
 void my_pile_print(int grid[3][3])
 {
-	int x, y;
+	int i, j;
 
-	for (x = 0; x < 3; x++)
+	for (i = 0; i < 3; i++)
 	{
-		for (y = 0; y < 3; y++)
+		for (j = 0; j < 3; j++)
 		{
-			if (y)
+			if (j)
 				printf(" ");
-			printf("%d", grid[x][y]);
+			printf("%d", grid[i][j]);
 		}
 		printf("\n");
 	}
