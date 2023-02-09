@@ -11,6 +11,7 @@ If n is impossible to achieve, return 0.
 """
 import math
 
+
 def minOperations(n):
     """
     calculates the fewest number of operations needed
